@@ -48,7 +48,7 @@ services:
 
   supernets2-sequencer:
     container_name: supernets2-sequencer
-    image: supernets2-node
+    image: hermeznetwork/supernets2-node:v0.0.1
     ports:
       - 9092:9091 # needed if metrics enabled
       - 6060:6060
@@ -65,7 +65,7 @@ services:
 
   supernets2-sequence-sender:
     container_name: supernets2-sequence-sender
-    image: supernets2-node
+    image: hermeznetwork/supernets2-node:v0.0.1
     environment:
       - SUPERNETS2_NODE_STATEDB_HOST=supernets2-state-db
       - SUPERNETS2_NODE_POOL_DB_HOST=supernets2-pool-db
@@ -81,7 +81,7 @@ services:
 
   supernets2-json-rpc:
     container_name: supernets2-json-rpc
-    image: supernets2-node
+    image: hermeznetwork/supernets2-node:v0.0.1
     ports:
       - 8123:8123
       - 8133:8133 # needed if WebSockets enabled
@@ -99,7 +99,7 @@ services:
 
   supernets2-aggregator:
     container_name: supernets2-aggregator
-    image: supernets2-node
+    image: hermeznetwork/supernets2-node:v0.0.1
     ports:
       - 50081:50081
       - 9093:9091 # needed if metrics enabled
@@ -116,7 +116,7 @@ services:
 
   supernets2-sync:
     container_name: supernets2-sync
-    image: supernets2-node
+    image: hermeznetwork/supernets2-node:v0.0.1
     environment:
       - SUPERNETS2_NODE_STATEDB_HOST=supernets2-state-db
     volumes:
@@ -129,7 +129,7 @@ services:
 
   supernets2-eth-tx-manager:
     container_name: supernets2-eth-tx-manager
-    image: supernets2-node
+    image: hermeznetwork/supernets2-node:v0.0.1
     ports:
       - 9094:9091 # needed if metrics enabled
     environment:
@@ -146,7 +146,7 @@ services:
 
   supernets2-l2gaspricer:
     container_name: supernets2-l2gaspricer
-    image: supernets2-node
+    image: hermeznetwork/supernets2-node:v0.0.1
     environment:
       - SUPERNETS2_NODE_POOL_DB_HOST=supernets2-pool-db
     volumes:
@@ -278,7 +278,7 @@ services:
 
   supernets2-explorer-json-rpc:
     container_name: supernets2-explorer-json-rpc
-    image: supernets2-node
+    image: hermeznetwork/supernets2-node:v0.0.1
     ports:
       - 8124:8124
       - 8134:8134 # needed if WebSockets enabled
@@ -360,7 +360,7 @@ services:
 
   supernets2-approve:
     container_name: supernets2-approve
-    image: supernets2-node
+    image: hermeznetwork/supernets2-node:v0.0.1
     environment:
       - SUPERNETS2_NODE_STATEDB_HOST=supernets2-state-db
     volumes:
@@ -396,7 +396,7 @@ services:
 
   supernets2-permissionless-node-forced-DAC:
     container_name: supernets2-permissionless-node-forced-DAC
-    image: supernets2-node
+    image: hermeznetwork/supernets2-node:v0.0.1
     ports:
       - 8125:8125
     environment:
@@ -424,7 +424,7 @@ services:
 
   supernets2-permissionless-node:
     container_name: supernets2-permissionless-node
-    image: supernets2-node
+    image: hermeznetwork/supernets2-node:v0.0.1
     ports:
       - 8125:8125
     environment:
