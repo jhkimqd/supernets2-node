@@ -97,10 +97,10 @@ make run-approve-matic
     - `Type:` Postgres DB
     - `User:` state_user
     - `Password:` state_password
-    - `Database:` state-db
+    - `Database:` state_db
     - `Host:` localhost
     - `Port:` 5432
-    - `Url:` <postgres://state_user:srare_password@localhost:5432/state-db>
+    - `Url:` <postgres://state_user:state_password@localhost:5432/state_db>
   - zkEVM Node *Pool* Database 
     - `Type:` Postgres DB
     - `User:` pool_user
